@@ -1,0 +1,219 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family:sans-serif;
+}
+
+a {
+	transition: .2s;
+	text-decoration: none;
+	color:#388cd1;
+}
+
+a:hover {
+	color:#4181b5;
+}
+
+.hide {
+	opacity: 0;
+}
+
+.conteiner {
+	background-color: #ebebed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 70%;
+	min-width: 500px;
+	margin: 50px 0 50px 0;
+}
+
+.main-info {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0 0 50px 0;
+	height: 300px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+#profile-photo {
+	background-color: bisque;
+	height: 200px;
+	width: 200px;
+	margin: 5% 10px 5% 10%;
+}
+
+.about-user {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 200px;
+	margin: 5% 50px 5% 0;
+}
+
+.about-user :nth-child(1) {
+	margin: 10px 0 20px 10px;
+	max-width: 100%;
+	max-height: 40px;
+	font-weight: 800;
+}
+
+.about-user :nth-child(2) {
+	margin: 0 0 20px 10px;
+	max-width: 100%;
+	max-height: 40px;
+}
+
+.about-user :nth-child(3) {
+	margin: 0 0 20px 10px;
+	max-width: 100%;
+	max-height: 100px;
+	font-style: italic;
+}
+
+.about-posts {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 200px;
+	margin: 5% 10px 5% 20px;
+}
+
+.about-posts div {
+	margin: 10px 0 0 0;
+}
+
+.about-posts div span {
+	font-weight: 700;
+}
+
+.my-posts {
+	height: 100%;
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.post {
+	width: 80%;
+	margin-bottom: 20px;
+	height: auto;
+	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.post .post-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.post .post-info div {
+	margin: 30px 20px 10px 20px;
+}
+
+.post .post-info :nth-child(1) {
+	font-weight: 700;
+}
+
+.post .post-info :nth-child(3) {
+	margin-left: 50px;
+	font-style: italic;
+}
+
+.post .post-photo {
+	width: 500px;
+	height: 500px;
+	margin-top: 30px;
+	background-color: bisque;
+}
+
+.post .post-buttons {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 60%;
+}
+
+.post .post-buttons div {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.post .post-buttons div img {
+	width: 100%;
+	height: 100%;
+}
+
+.post .post-buttons :nth-child(1) {
+	float: left;
+}
+
+.post .post-buttons :nth-child(1) :nth-child(1) {
+	margin-right: 20px;
+}
+
+.post .post-buttons :nth-child(2) {
+	float: right;
+}
+
+.post .post-comments {
+	display: flex;
+	flex-direction: column;
+	min-height: 10px;
+	padding-top: 10px;
+	width: 70%;
+}
+
+.post .post-comments .comment {
+	width: 100%;
+	min-height: 70px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+}
+
+.post .post-comments .comment .comment-photo {
+	width: 70px;
+	height: 70px;
+	margin-right: 20px;
+	background-color: bisque;
+}
+
+.post .post-comments .comment .comment-body {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.post .post-comments .comment .comment-body .comment-title {
+	height: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.post .post-comments .comment .comment-body .comment-title .comment-by {
+	margin-right: 20px;
+}
+
+.post .post-comments .comment .comment-body .comment-content {
+	height: 80%;
+	width: 100%;
+	margin-top: 10px;
+}

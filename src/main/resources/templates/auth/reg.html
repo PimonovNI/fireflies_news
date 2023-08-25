@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/auth-style.css}">
+</head>
+<body>
+	<script defer th:src="@{/js/auth-reg.js}"></script>
+
+	<div class="conteiner">
+		<div class="content">
+			<div class="name-form">
+				<hr/>
+				<div>Реєстрація</div>
+			</div>
+			<form enctype="multipart/form-data" class="info" th:action="@{/auth/reg}" th:method="POST" th:object="${user}">
+				<input name="username" type="text" th:field="*{username}" placeholder="Логін">
+				<div th:if="${#fields.hasErrors('username')}" class="error">
+					<div th:errors="*{username}"></div>
+				</div>
+				<input name="email" type="text" th:field="*{email}" placeholder="Пошта">
+				<div th:if="${#fields.hasErrors('email')}" class="error">
+					<div th:errors="*{email}"></div>
+				</div>
+				<input name="password" type="password" th:field="*{password}" placeholder="Пароль">
+				<div th:if="${#fields.hasErrors('password')}" class="error">
+					<div th:errors="*{password}"></div>
+				</div>
+				<div>
+					<label for="photo-input">Фото для аккаунту</label>
+					<input name="photo" type="file" th:field="*{photo}" accept="image/png, image/jpeg" id="photo-input">
+				</div>
+				<input type="submit" value="Реєстрація">
+			</form>
+			<div class="to-other-auth">
+				<div><p>Вже зареєстровані?</p></div>
+				<div><a th:href="@{/auth/login}">Вхід</a></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
